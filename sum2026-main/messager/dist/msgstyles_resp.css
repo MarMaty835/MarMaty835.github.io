@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+  .nickname-line,
+  .me ssage-line {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+  
+  .nickname-input,
+  .message-input {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  
+  .nickname-btn,
+  .send-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nickname-line {
+    flex-direction: column;
+  }
+  
+  .nickname-btn {
+    width: 100%;
+  }
+}

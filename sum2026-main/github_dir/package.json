@@ -1,0 +1,21 @@
+{
+  "name": "new_proj",
+  "version": "1.0.0",
+  "description": "new proj meyb",
+  "license": "ISC",
+  "author": "as3",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "gl-matrix": "^3.4.4",
+    "rollup": "^4.61.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^1.0.0"
+  }
+}

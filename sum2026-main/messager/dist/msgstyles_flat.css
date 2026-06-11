@@ -1,0 +1,63 @@
+.nickname-line,
+.message-line {
+  display: flex;
+  gap: 8px;
+  padding: 10px 14px;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  align-items: center;
+}
+
+.nickname-input,
+.message-input {
+  flex: 1;
+  padding: 8px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #374151;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.message-input {
+  border-radius: 20px;
+}
+
+.nickname-input:focus,
+.message-input:focus {
+  border-color: #6366f1;
+}
+
+.nickname-input::placeholder,
+.message-input::placeholder {
+  color: #9ca3af;
+}
+
+.nickname-btn,
+.send-btn {
+  padding: 8px 18px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+
+.send-btn {
+  border-radius: 20px;
+}
+
+.nickname-btn:hover,
+.send-btn:hover {
+  background: #4f46e5;
+}
+
+.nickname-btn:active,
+.send-btn:active {
+  background: #4338ca;
+}
