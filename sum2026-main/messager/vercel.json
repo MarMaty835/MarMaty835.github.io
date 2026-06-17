@@ -1,15 +1,15 @@
 {
-  "version": 2,
+  "version": 3,
   "builds": [
     {
-      "src": "src/server/index.js", // <-- Укажите ваш новый путь к точке входа
-      "use": "@vercel/node"    // Или "@vercel/python" для Python
+      "src": "src/server/index.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/server.js" // Должно совпадать с src в builds
+      "dest": "src/server/index.js"
     }
   ]
 }
