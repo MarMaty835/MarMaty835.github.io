@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css' rel='stylesheet'>
+    <link href='info.css' rel='stylesheet'>
+</head>    
+<body style="margin: 0;">
+    
+    <div id='map' style='width: 100vw; height: 100vh;'></div>
+    <div class="map-popup">
+        <div class="popup-header">
+            <h3 class="popup-title" id="tit">Москва</h3>
+            <span class="popup-category">Город</span>
+        </div>
+
+        <div class="popup-body" id="box">
+            <img class="popup-image" id="arm" alt="Кофейня">
+
+            <p class="popup-description" id="des">Уютная кофейня с авторскими десертами и свежей выпечкой</p>
+
+            <ul class="popup-params" id="params">
+            <li class="popup-param-item">
+                <span class="param-label">Широта</span>
+                <span class="param-value" id="lat">Есть</span>
+            </li>
+            <li class="popup-param-item">
+                <span class="param-label">Долгота</span>
+                <span class="param-value" id="lng">Есть</span>
+            </li>
+            <li class="popup-param-item">
+                <span class="param-label">Население</span>
+                <span class="param-value" id="pop">Есть</span>
+            </li>
+            <li class="popup-param-item">
+                <span class="param-label">Дата основания</span>
+                <span class="param-value" id="dat">Есть</span>
+            </li>
+            </ul>
+        </div>
+        <div class="popup-footer">
+        <button class="btn" id="pushback">На место</button>
+        </div>
+    </div>
+
+<div class="search-container">
+  <div class="search-box">
+    <input type="text" class="search-input" placeholder="Поиск..." id="searchString">
+    <button class="search-button" id="schbtn">
+    </button>
+  </div>
+  <ul class="suggestions-list" id="helpvars">
+  </ul>
+</div>
+    <script src="main.js">
+    </script>
+</script>
+</body>
+</html>

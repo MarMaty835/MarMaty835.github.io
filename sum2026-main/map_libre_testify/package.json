@@ -1,0 +1,30 @@
+{
+  "name": "map_libre_testify",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dat.gui": "^0.7.9",
+    "fs": "^0.0.1-security",
+    "maplibre-gl": "^5.24.0",
+    "maplibre-gl-draw": "^1.6.9",
+    "maplibre-gl-geo-editor": "^0.8.0",
+    "osm2geojson-ultra": "^4.0.1",
+    "osmtogeojson": "^3.0.0-beta.5",
+    "overpass": "^0.2.2",
+    "rollup": "^4.62.2",
+    "rollup-plugin-polyfill-node": "^0.13.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^1.0.0"
+  }
+}
