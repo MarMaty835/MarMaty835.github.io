@@ -151,10 +151,47 @@
         font-size: 16px;
     }
 }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .block {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 12px;
+        }
+        
+        /* Стили для компьютера - скролл заблокирован */
+        @media (min-width: 769px) {
+            body {
+                overflow: hidden; /* Блокируем скролл на ПК */
+                height: 100vh;
+            }
+        }
+        
+        /* Стили для телефона - скролл разрешён */
+        @media (max-width: 768px) {
+            body {
+                overflow-y: auto; /* Разрешаем скролл на телефонах */
+                height: auto;
+                min-height: 100vh;
+            }
+        }
 </style>
 
 </head>    
-<body style="margin: 0; overflow: hidden;">
+<body style="margin: 0; overflow: clip; padding: 0%;">
     <canvas id="webgl-canvas" style="border: none; width: 100vw; height: 100vh" ></canvas>
         <script src = "main.js">
     </script>
