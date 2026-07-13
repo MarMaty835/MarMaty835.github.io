@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Основной контейнер окна - без фона */
+.window-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Прижимаем к низу */
+    z-index: 9999;
+    font-family: 'Arial', sans-serif;
+    pointer-events: none; /* Окно не перехватывает клики */
+    padding-bottom: 80px; /* Отступ снизу */
+}
+
+/* Оконный блок - без фона */
+.window-box {
+    background: transparent; /* Убираем фон */
+    backdrop-filter: none; /* Убираем размытие */
+    -webkit-backdrop-filter: none;
+    border-radius: 0;
+    padding: 20px 40px;
+    max-width: 100%; /* Максимальная ширина */
+    width: 100%;
+    border: none; /* Убираем рамку */
+    box-shadow: none; /* Убираем тень */
+    text-align: center;
+    animation: slideUp 0.8s ease-out;
+    pointer-events: none; /* Блок не кликабельный */
+}
+
+/* Заголовок - ШИРОКИЙ */
+.window-box h1 {
+    color: #ffffff;
+    font-size: 72px;
+    font-weight: 900;
+    margin: 0;
+    text-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+    letter-spacing: 4px;
+    width: 100%; /* На всю ширину */
+    max-width: 100%;
+    
+    /* Запрет выделения */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+    cursor: default;
+    
+    /* Перенос слов */
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/* Подзаголовок - ШИРОКИЙ */
+.window-box p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 10px 0 0;
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 100%;
+    
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+    cursor: default;
+    
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/* Дополнительный текст */
+.window-box .sub-text {
+    font-size: 18px;
+    opacity: 0.6;
+    margin-top: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    width: 100%;
+    
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Анимация появления снизу */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Убираем декоративные элементы */
+.window-box .divider {
+    display: none; /* Скрываем линию */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .window-overlay {
+        padding-bottom: 60px;
+    }
+    
+    .window-box {
+        padding: 15px 20px;
+    }
+    
+    .window-box h1 {
+        font-size: 48px;
+        letter-spacing: 2px;
+    }
+    
+    .window-box p {
+        font-size: 20px;
+    }
+    
+    .window-box .sub-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .window-overlay {
+        padding-bottom: 40px;
+    }
+    
+    .window-box h1 {
+        font-size: 32px;
+    }
+    
+    .window-box p {
+        font-size: 16px;
+    }
+}
+</style>
+
+</head>    
+<body style="margin: 0; overflow: hidden;">
+    <canvas id="webgl-canvas" style="border: none; width: 100vw; height: 100vh" ></canvas>
+        <script src = "main.js">
+    </script>
+<div class="window-overlay">
+    <div class="window-box">
+        <h1>С днем рождения мама!</h1>
+        <div class="divider"></div>
+        <p>От Антона</p>
+        <p class="sub-text">СЕрдце реймарчинг</p>
+    </div>
+</div>
+</body>
+</html>
